@@ -732,7 +732,7 @@ rte_mempool_cache_free(struct rte_mempool_cache *cache)
 
 /* create an empty mempool */
 struct rte_mempool *
-rte_mempool_create_empty(const char *name, unsigned n, unsigned elt_size,
+rte_mempool_create_empty(const char *name, uint32_t n, unsigned elt_size,
 	unsigned cache_size, unsigned private_data_size,
 	int socket_id, unsigned flags)
 {
@@ -862,7 +862,7 @@ exit_unlock:
 
 /* create the mempool */
 struct rte_mempool *
-rte_mempool_create(const char *name, unsigned n, unsigned elt_size,
+rte_mempool_create(const char *name, uint32_t n, unsigned elt_size,
 	unsigned cache_size, unsigned private_data_size,
 	rte_mempool_ctor_t *mp_init, void *mp_init_arg,
 	rte_mempool_obj_cb_t *obj_init, void *obj_init_arg,
@@ -917,7 +917,7 @@ rte_mempool_create(const char *name, unsigned n, unsigned elt_size,
  * behavior.
  */
 struct rte_mempool *
-rte_mempool_xmem_create(const char *name, unsigned n, unsigned elt_size,
+rte_mempool_xmem_create(const char *name, uint32_t n, unsigned elt_size,
 		unsigned cache_size, unsigned private_data_size,
 		rte_mempool_ctor_t *mp_init, void *mp_init_arg,
 		rte_mempool_obj_cb_t *obj_init, void *obj_init_arg,
